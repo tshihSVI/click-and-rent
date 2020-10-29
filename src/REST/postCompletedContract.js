@@ -21,7 +21,7 @@ const postCompletedContract = async (contractDetails) => {
         body: JSON.stringify(contractDetails) // body data type must match "Content-Type" header
     }
 
-    url = `${process.env.DOCUMENT_MICROSERVICE_URL}/api`
+    let url = `${process.env.DOCUMENT_MICROSERVICE_URL}/api`
     let response = await fetch(url,requestSettings)
         .catch(() => alert({
             title:"Could not submit information to database",

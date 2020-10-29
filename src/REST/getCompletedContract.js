@@ -15,7 +15,7 @@ const getCompletedContract = async (reference_id) => {
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
     }
 
-    url = `${process.env.DOCUMENT_MICROSERVICE_URL}/api/${reference_id}`
+    let url = `${process.env.DOCUMENT_MICROSERVICE_URL}/api/${reference_id}`
     let response = await fetch(url,requestSettings)
         .catch(() => alert({
             title:"Could not retrieve information from database",
