@@ -5,6 +5,8 @@ const DocumentContext = React.createContext({
     setData: () => {},
     reference_id: undefined,
     setReference_id: () => {},
+    brand_id: undefined,
+    setBrand_id: () => {},
 });
 
 export default DocumentContext

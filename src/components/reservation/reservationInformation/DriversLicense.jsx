@@ -18,8 +18,8 @@ const DriversLicense = ({onChange,data}) => {
     return (
         <LicenseForm>
             <FormField label="Driver's License Number:" type="text" onChange={handleChange} formData={formData} name="number" />
-            <FormField label="Date of Birth:"           type="text" onChange={handleChange} formData={formData} name="date_of_birth" />
-            <FormField label="Experiation Date:"        type="text" onChange={handleChange} formData={formData} name="expiry" />
+            <FormField label="Date of Birth:"           type="date" onChange={handleChange} formData={formData} name="date_of_birth" />
+            <FormField label="Experiation Date:"        type="date" onChange={handleChange} formData={formData} name="expiry" />
             <FormField label="Province:"                type="text" onChange={handleChange} formData={formData} name="province" />
         </LicenseForm>
     )

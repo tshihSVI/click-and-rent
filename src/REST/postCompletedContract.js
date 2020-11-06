@@ -27,14 +27,11 @@ const postCompletedContract = async (contractDetails) => {
             title:"Could not submit information to database",
         }))
     if (response == undefined) return undefined;
-
     let response_body = await response.json()
         .catch(() => alert({
             title:"Read data recieved from database",
         }))
-
     let reference_id = await response_body.ref_id
-
     return reference_id
 }
 

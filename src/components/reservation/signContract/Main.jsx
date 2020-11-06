@@ -1,25 +1,32 @@
 import React from "react";
-import styled from "styled-components";
 import AgreementBlock from "./AgreementBlock";
 
 import contractTerms from "~/src/static/contract/terms"
 
 const Main = ({onChange,data}) => {
-    const formData = data["terms_and_conditions"]? data["terms_and_conditions"]:{};
-    const handleChange = event => {
-        const {value,name} = event.target;
-        onChange("terms_and_conditions",{...formData,[name]:value})
+    const formData = data? data:{};
+
+    const handleChange = (key,value) => {
+        onChange("terms_and_conditions",{...formData,[key]:value})
     };
 
-    let contractTermComponents = contractTerms.map(({title,content}) =>
-        <AgreementBlock title={title} content={content} key={title}/>)
+    let contractTermComponents = contractTerms.map(({title,sections}) =>(
+        <AgreementBlock
+            key={title}
+            title={title}
+            sections={sections}
+            onChange={handleChange}
+            data={formData.trace}/>
+    ))
 
     return (
         <React.Fragment>
             {contractTermComponents}
             <div> 
                 I 
-                <input type="text" onChange={handleChange} name="signature" />
+                <input  type="text" 
+                        onChange={({target:{name,value}})=>{handleChange(name,value)}} 
+                        name="signature" />
                 agree to the Rental Agreement
             </div>
             <input type="submit" value="Submit" />

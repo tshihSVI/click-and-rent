@@ -1,6 +1,6 @@
 import regeneratorRuntime from "regenerator-runtime";
 
-/** 
+/**
 * Retrieves Contract Details
 * @param {String} reference_id - the reference code of the contract
 * @return {Object} The completed form from reservations component

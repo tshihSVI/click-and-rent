@@ -1,21 +1,4 @@
 const formLayout = {
-    additional_contacts: {
-        additional_contact: {
-            last_name: "",
-            first_name: "",
-            email: "",
-            phone_number: "",
-            relationship: "",
-        },
-        lein_holders: {
-            first_name: "",
-            last_name: "",
-            phone_number: "",
-            city: "",
-            province: "",
-            postal_code: "",
-        }
-    },
     reservation: {
         personal_details: {
             first_name: "",
@@ -35,6 +18,23 @@ const formLayout = {
             date_of_birth: "",
             expiry: "",
             province: "",
+        }
+    },
+    additional_contacts: {
+        additional_contact: {
+            last_name: "",
+            first_name: "",
+            email: "",
+            phone_number: "",
+            relationship: "",
+        },
+        lein_holders: {
+            first_name: "",
+            last_name: "",
+            phone_number: "",
+            city: "",
+            province: "",
+            postal_code: "",
         }
     },
     payment: {
@@ -58,6 +58,8 @@ const formLayout = {
     },
     terms_and_conditions: {
         signature: "",
+        trace:{
+        },
     },
 }
 

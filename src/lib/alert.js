@@ -16,7 +16,7 @@ const alert = ({title,message,type}) => {
         animationIn: ["animated", "fadeIn"],
         animationOut: ["animated", "fadeOut"],
         dismiss: {
-          duration: 3000,
+          duration: 4000,
           onScreen: true
         }
     }

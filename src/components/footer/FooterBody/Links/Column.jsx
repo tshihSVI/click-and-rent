@@ -4,6 +4,10 @@ import Col from "react-bootstrap/Col"
 
 const Link = styled.a`
     display:block;
+    color:white;
+    &:hover {
+        color:white;
+    }
 `;
 
 const Column = ({label,content}) => {

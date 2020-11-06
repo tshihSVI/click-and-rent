@@ -15,7 +15,7 @@ const SignedContractStyle = styled.div`
 `;
 
 const SignedContract = () => {
-    const {data:DocumentFields,reference_id} = React.useContext(DocumentContext)
+    const {reference_id} = React.useContext(DocumentContext)
     return (
         <SignedContractStyle>
             <h1>Thank you, your reference ID is: {reference_id}</h1>

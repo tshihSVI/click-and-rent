@@ -15,11 +15,13 @@ const FormFieldStyle = styled.label`
     }
 `;
 
-const FormField = ({label,
+const FormField = ({className,
+                    label,
                     type,
                     onChange,
                     formData,
                     name,
+                    custom,
                     children}) => {
     if (children != undefined){
         return (
@@ -37,9 +39,9 @@ const FormField = ({label,
         }
 
         return (
-            <FormFieldStyle>
+            <FormFieldStyle className={className}>
                 {label}
-                <input type={type} onChange={onChange} value={initial_value} name={name}/>
+                <input type={type} onChange={onChange} value={initial_value} name={name} {...custom}/>
             </FormFieldStyle>
         )
     }
